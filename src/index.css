@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: #0B0A10;
+    --color-surface: #13121A;
+    --color-surface-elevated: #1A1822;
+    --color-border: #292633;
+    --color-primary: #7C5CFC;
+    --color-primary-hover: #8B72FF;
+    --color-text-primary: #F5F3FA;
+    --color-text-secondary: #A7A3B5;
+    --color-text-muted: #6F6A7D;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #F5F3FA;
+    background-color: #0B0A10;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #292633;
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3A3644;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #7C5CFC;
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background-image: linear-gradient(135deg, #7C5CFC, #A855F7);
+  }
+
+  .gradient-primary-text {
+    background-image: linear-gradient(135deg, #7C5CFC, #A855F7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .shimmer-bg {
+    background: linear-gradient(
+      90deg,
+      #13121A 25%,
+      #1A1822 50%,
+      #13121A 75%
+    );
+    background-size: 200% 100%;
+  }
+}
